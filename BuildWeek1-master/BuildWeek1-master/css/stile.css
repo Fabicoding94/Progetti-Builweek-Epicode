@@ -1,0 +1,1228 @@
+/* ------GENERALE------ */
+@font-face {
+    font-family: FontTeam2;
+    src: url(../assets/fonts/ufonts.com_tw-cen-mt.ttf);
+}
+
+:root {
+    --swiper-theme-color: #FF540B;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: FontTeam2;
+}
+
+.orange-txt {
+    color: #FF540B;
+}
+
+.txt-small {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.txt-big {
+    font-weight: 800;
+    font-size: 1.9rem;
+}
+
+
+/* !!!!!!!!!!!cambiato leggermente h3!!!!!!!!!!! */
+h3 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* ------HEADER------ */
+
+
+#head-container {
+    position: relative;
+}
+
+#head-img {
+    width: 100%;
+    height: auto;
+}
+
+#head-container::before {
+    background-image: url(../assets/images/overlay-pattern2.png);
+    background-repeat: repeat;
+    opacity: 0.5;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    content: "";
+}
+
+/* ///////////////NAV BAR TEST AREA////////////////// */
+
+#nav-area {
+    /* max-width: 1080px; da giocarci con i mediaqueries */
+    background-color: rgba(255, 255, 255, 0.89);
+    height: 5rem;
+    width: 95%;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: 2.5%;
+    right: 2.5%;
+    z-index: 100;
+}
+#nav-area li{
+    box-sizing: border-box;
+}
+
+.bordo{
+    border-bottom: 5px solid #FF540B;
+}
+
+
+
+
+#nav-area.sticked {
+    position: fixed;
+    top: 0px;
+}
+
+
+#nav-area ul {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.89);
+}
+
+#nav-area ul a {
+    font-size: 0.94rem;
+    font-weight: 500;
+    color: #2E2E2E;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+    margin: 0 15px;
+}
+
+#nav-area #logo {
+    float: left;
+    padding: 25px 20px;
+}
+
+#nav-area .menu {
+    clear: both;
+    /*evito che il float mi sposti il menu*/
+    max-height: 0;
+    transition: max-height .6s ease-out;
+
+}
+
+#nav-area .menu-icon {
+
+    padding: 38px 20px;
+    position: relative;
+    float: right;
+    cursor: pointer;
+}
+
+#nav-area .menu-icon .nav-icon {
+    background-color: #FF540B;
+    display: block;
+    width: 25px;
+    height: 3px;
+    position: relative;
+    transition: background-color .2s ease-in;
+}
+
+#nav-area .menu-icon .nav-icon:before,
+#nav-area .menu-icon .nav-icon:after {
+    background-color: #FF540B;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    transition: all .2s ease-out;
+    position: absolute;
+
+}
+
+#nav-area .menu-icon .nav-icon:before {
+    top: 8px;
+}
+
+#nav-area .menu-icon .nav-icon:after {
+    top: -8px;
+}
+
+#nav-area .menu-btn {
+    display: none;
+}
+
+#nav-area .menu-btn:checked~.menu {
+    padding: 10px 0;
+    max-height: 240px;
+}
+
+#nav-area .menu-btn:checked~.menu-icon .nav-icon {
+    background-color: transparent;
+}
+
+#nav-area .menu-btn:checked~.menu-icon .nav-icon::before {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+#nav-area .menu-btn:checked~.menu-icon .nav-icon:after {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+/* ///////////////FINE NAV BAR TEST AREA////////////////// */
+#head-content {
+    width: 100%;
+}
+
+#featured-h3 {
+    padding: 1rem;
+    position: relative;
+    float: left;
+    left: 5%;
+}
+
+/* ///////////////SLIDER TEST AREA////////////////// */
+.carusel {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+    margin: 0 auto;
+}
+
+.carusel>.slide-container {
+    width: 100%;
+    padding: 2rem 0;
+    margin-left: 0;
+    margin-right: 0;
+
+}
+
+.slide-content {
+    overflow: hidden;
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 25px;
+    /*non necessario ivedere in corso dopera*/
+}
+
+.slide-content {
+    margin: 0 40px;
+    /*margine da sinistra*/
+}
+
+/* styling arrows */
+.slide-container>.swiper-navBtn {
+    color: orangered;
+    transition: color 0.2s ease-in-out;
+}
+
+.slide-container>.swiper-navBtn:hover {
+    color: rgb(163, 43, 0);
+}
+
+/* size delle arrow */
+.slide-container>.swiper-navBtn::before,
+.slide-container>.swiper-navBtn::after {
+    font-size: 2rem;
+}
+
+/* riecordarsi che le arrow hanno zindex 10 di default */
+/* possibile conflitto con menu a tendina */
+.slide-container>.swiper-button-next {
+    right: 0px;
+}
+
+.slide-container>.swiper-button-prev {
+    left: 0px;
+}
+
+/* why bullet color nowork? */
+/* ??? roba modificata dalk root ok ma come cazzo li metto al centro ??? */
+.slide-container>.swiper-pagination-bullet {
+    position: absolute;
+    /* background-color: orangered; */
+    opacity: 1;
+}
+
+.slide-container>.swiper-pagination-bullet:active {
+    background-color: rgb(163, 43, 0);
+    opacity: 1;
+}
+
+/* ///////////////FINE SLIDER TEST AREA////////////////// */
+
+/* ------SECT-INFO------ */
+/* ------ID CAMBIATO------ */
+
+/* cambiato padding */
+#sect-cuoco {
+    background-color: #f6f6f6;
+    text-align: center;
+    padding: 4rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#sect-cuoco img {
+    height: 132px;
+    width: 132px;
+}
+
+.to-new-line {
+    display: block;
+
+}
+
+#sect-cuoco h2 {
+    font-size: 20px;
+    padding: 40px 0;
+    position: relative;
+    color: #2E2E2E;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+#sect-cuoco h2::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 140px;
+    background-color: #C8C1B3;
+    left: 50%;
+    margin-left: -70px;
+    bottom: 0px;
+}
+
+#sect-cuoco p {
+    padding-top: 40px;
+    font-size: 14px;
+    line-height: 26px;
+    color: #959595;
+    box-sizing: border-box;
+    letter-spacing: -0.2px;
+}
+
+/* ------SECT-BLOG------ */
+
+
+#sect-blog {
+    padding-top: 75px;
+    padding-bottom: 100px;
+    background: url(../assets/images/blog/blog-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    position: relative;
+    padding: 1rem;
+}
+
+#sect-blog:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../assets/images/overlay-pattern.png) #000000;
+    opacity: 0.3;
+    left: 0;
+    top: 0;
+}
+
+#sect-blog #blog-title{
+    position: relative;
+}
+
+
+#sect-blog h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    font-size: 1.5rem;
+    color: white;
+}
+
+
+/* !!!!!!!!!!!!AGGIUNTO DIV BLOG PLATES!!!!!!!!!!!!! */
+
+
+
+#blog-plates{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* data attribute per roversare i piatti che mi servono */
+#blog-plates [data-reverse] {
+    flex-direction: column-reverse;
+}
+
+.blog-piatto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1rem;
+    z-index: 1;
+
+}
+
+/* -----------------------------------------------------------QUA <------------------*/
+.fade{
+    opacity: 0;
+    transform: scale(0.1);  
+}
+
+.active{
+    opacity: 1;
+    transform: scale(1);
+    transform-origin: top;
+    transition: all 0.7s ease-in-out; 
+}
+
+.blog-img img {
+    width: 100%;
+    max-width: 440px;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --------------------------------PROVA ANIMAZIONE IMMAGINE */
+
+.blog-img{
+    overflow: hidden;
+}
+
+.blog-piatto img{
+    transition: transform .5s ease-in-out;
+}
+
+.blog-piatto:hover img{
+    transform: scale(1.2) rotate(10deg);
+}
+
+/* ========================================================== */
+
+.blog-txt {
+    box-sizing: border-box;
+    max-width: 440px;
+    padding: 2rem;
+    text-align: center;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+
+.blog-txt p {
+    color: #959595;
+    font-size: 0.8rem;
+}
+
+
+#sect-blog .button-container {
+
+    height: 80px;
+    position: relative;
+    margin-bottom: 2rem;
+    bottom: -2rem;
+}
+
+#sect-blog #blog-btn {
+    position: absolute;
+    left: 5%;
+    padding: 28px 85px;
+    background-color: #ff530a;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+#sect-blog #blog-btn:hover{
+    background-color: transparent;
+    border: 1px solid #ff530a;
+    color: #ff530a;
+    border-radius: 15px;
+    transition: border-radius, background-color .3s ease-in-out;
+    font-weight: 700;
+}
+
+
+/* ------SECT-MENU------ */
+/* cambiato padding */
+#sect-menu {
+    background-color: white;
+    position: relative;
+    padding: 0 1rem 4rem 1rem;
+    display: inline;
+}
+
+.title-menu {
+    text-align: center;
+}
+
+#container-menu {
+    padding: 0 1rem;
+}
+
+#container-menu * {
+    max-width: 720px;
+}
+
+.title-menu h2 {
+    margin-top: 6rem;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.title-menu p {
+    margin-bottom: 5rem;
+    color: #9D9D9D;
+    line-height: 26px;
+    font-size: 0.95rem;
+}
+
+.blocco {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.border-dotted {
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    border-bottom: 1px dotted #C9C9C9;
+    display: none;
+}
+
+.grey-line {
+    height: 1px;
+    width: 140px;
+    background-color: #C8C1B3;
+    margin: 2rem auto;
+
+}
+
+.blocco p {
+    margin-bottom: 3rem;
+    color: #9D9D9D;
+    font-size: 0.3rem;
+}
+
+#sect-menu h3 {
+    margin-bottom: 1rem;
+    z-index: 1;
+    background-color: white;
+    height: 21px;
+    font-weight: 500;
+}
+
+#container-menu>h3 {
+    margin-bottom: 4rem;
+}
+
+.menu-itm>h3 {
+    margin-bottom: 1rem;
+}
+
+.menu-itm span {
+    color: #938463;
+    font-size: 0.8rem;
+}
+.menu-itm p {
+    margin-bottom: 3rem;
+    color: #949494;
+    font-size: 0.75rem;
+    line-height: 20px;
+}
+
+#menu-ultimo p {
+    margin-bottom: 11rem;
+}
+
+#menu-btn {
+    background-color: white;
+    border: 1px solid #FF4F02;
+    float: right;
+    color: #FF4F02;
+    margin-top: -8rem;
+    padding: 1.8rem 6rem;
+    text-decoration: none;
+}
+
+#sect-menu>a {
+    text-align: center;
+    padding-top: 2rem;
+    color: #FF540B;
+}
+#menu-btn:hover {
+    background-color: #FF4F02;
+    color: white;
+    transition-duration: 0.5s;
+}
+
+
+
+/* ------SECT-SUBSCRIBE------ */
+
+#sect-subscribe {
+    background-image: url("../assets/images/subscribe-bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+    height: 63.2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0 1rem;
+
+}
+
+#sect-subscribe:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../assets/images/overlay-pattern.png) #000000;
+    opacity: 0.3;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+#sect-subscribe div {
+    z-index: 2;
+}
+
+#sect-subscribe p {
+    padding: 25px 0;
+    font-size: 1rem;
+}
+
+#sect-subscribe h2,
+#sect-subscribe p,
+#sect-subscribe button {
+    color: white;
+}
+
+#subscribe-input-general,
+#news-input-container,
+#news-input {
+    width: 100%;
+}
+
+#news-input,
+#news-btn {
+    padding: 6px 12px;
+    height: 65px;
+}
+
+#news-input {
+    opacity: 0.9;
+    border: none;
+    font-size: 13px;
+    color: #555;
+    outline: none;
+}
+
+#subscribe-heading h2 {
+    padding: 40px 0;
+    font-size: 1.6rem;
+    position: relative;
+}
+
+#subscribe-heading h2::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 140px;
+    background-color: #C8C1B3;
+    left: 50%;
+    margin-left: -70px;
+    bottom: 0px;
+}
+
+#news-btn {
+    background-color: #7EC3BB;
+    width: 212px;
+    border: none;
+    text-shadow: 0px 0px 3px white;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+#news-btn:hover {
+    background-color: #639b94;
+}
+#news-btn-container {
+    margin-top: 20px;
+    text-align: left;
+}
+
+/* ------CONTACT-US------ */
+/* CONTACT US (Fabi)*/
+
+/* tolto margin sistemato padding */
+#contact-us {
+    box-sizing: border-box;
+    padding: 3rem 1rem;
+    padding-bottom: 2rem;
+
+}
+
+#contact-us h3 {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    position: relative;
+    color: #2E2E2E;
+}
+
+#contact-us h3::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 140px;
+    background-color: #C8C1B3;
+    left: 50%;
+    margin-left: -70px;
+    top: 4rem;
+}
+
+/* aggiunto margin 0 auto perche' c'e qualcosa che interferisce */
+#contact-form {
+    width: 100%;
+    max-width: 720px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+#contact-form h4 {
+    margin: 1.5rem 0;
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+#contact-form input,
+#contact-form textarea {
+    margin: 0.5rem 0;
+    font-size: 12px;
+    border-color: #ccc;
+    color: #555;
+    /* padding-left: 1rem; */
+    transition: 0.3s all;
+    border: 1px solid #ccc;
+    box-shadow: none;
+    padding: 6px 12px;
+}
+
+#contact-form input {
+    height: 47px;
+}
+
+#contact-form textarea {
+    height: 7rem;
+    padding-top: 0.5rem;
+
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    outline: none;
+    border: 1px solid #7EC3BB;
+
+}
+
+#contact-btn {
+    width: 100%;
+    height: 3.5rem;
+    margin: 1.5rem auto;
+    padding-top: 0.5rem;
+    color: white;
+    font-weight: 600;
+    background-color: #FF4F02;
+    border: 1px dotted white;
+    border-spacing: -0.1rem;
+}
+
+
+/* ------SECT-INFO------ */
+
+
+/*SECT INFO- footer (Fabi)*/
+
+/* aggiunto del tutto #info-container */
+#info-container {
+    margin: 4rem 1rem;
+}
+
+#info-container h3,
+#blog-post-container1 h3,
+#blog-post-container2 h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+    font-size: 20px;
+}
+
+.mini-div-info {
+    margin-bottom: 1rem;
+}
+
+#info-container h3,
+#blog-post-container1 h3 {
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+#blog-post-container2 h3 {
+    margin-bottom: 1rem;
+}
+
+#info-container,
+#blog-post-container1,
+#blog-post-container2 {
+    margin-bottom: 4.5rem;
+    line-height: 2rem;
+
+}
+
+#info-container p,
+#blog-post-container1 p,
+#blog-post-container2 p {
+    font-size: 0.9rem;
+}
+
+.fa-phone,
+.fa-location-dot,
+.fa-envelope {
+    margin-right: 2rem;
+}
+
+
+
+.blog-post-d {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-bottom: 1rem;
+
+}
+
+#fa-img-social {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.4rem;
+
+    font-size: 1rem;
+
+}
+
+#fa-img-social a {
+    width: 2.5rem;
+    height: 1.6rem;
+    text-align: center;
+    border-radius: 50%;
+    color: white;
+    background-color: #b7b7b7;
+    padding-top: 0.9rem;
+
+
+}
+
+
+
+#fa-img-social a:hover {
+    background-color: #FF4F02;
+    transition-duration: 0.2s;
+}
+
+
+
+
+.blog-post-div a {
+    text-decoration: none;
+}
+
+
+#final-foot {
+    background-color: #E9E9E9;
+    line-height: 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 1.25rem 0;
+
+}
+
+#final-foot>p {
+
+    text-align: center;
+
+}
+
+/* -----MEDIA QUERIES----- */
+@media screen and (max-width: 992px) {
+
+    .slide-content {
+        margin: 0 10px;
+        /*diminuisco margin perche tolgo frecce*/
+    }
+
+    .slide-container>.swiper-navBtn {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    /* ------SECT-MENU------ */
+    .blocco {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0;
+    }
+
+    .border-dotted {
+        display: inline;
+    }
+
+    .title-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .title-menu p {
+        max-width: 720px;
+    }
+
+    #sect-menu {
+        max-width: 720px;
+    }
+
+    #container-menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .title-menu h2 {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
+    #container-menu {
+        padding: 0;
+    }
+
+    /* -----SECT BLOG----- */
+
+    .blog-piatto {
+        flex-direction: row;
+    }
+
+    #blog-plates [data-reverse] {
+        flex-direction: row-reverse;
+    }
+
+    .quadrato {
+        background-color: white;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        left: -20px;
+        top: 30px;
+        transform: rotateZ(45deg);
+    }
+
+    .blog-piatto[data-reverse] .quadrato {
+        left: unset;
+        right: -20px;
+    }
+
+    #sect-blog #blog-btn {
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    /* ------SECT-SUBSCRIBE------ */
+    #sect-subscribe {
+        height: 54%;
+    }
+
+    #subscribe-input-general {
+        display: flex;
+        width: 662px;
+    }
+
+    #news-btn-container {
+        margin: 0;
+    }
+
+    #subscribe-heading h2 {
+        font-weight: 500;
+        font-size: 1.8rem;
+    }
+
+    .txt-small {
+        font-size: 2.2rem;
+    }
+
+    /* ------SECT-INFO------ */
+    #sect-cuoco {
+        height: 521px;
+    }
+
+    #sect-cuoco h2 {
+        font-size: 28px;
+    }
+
+    .txt-big {
+        font-size: 2.4rem;
+    }
+    
+    /*-------SECT-MENU------*/
+    #menu-btn {
+        position: relative;
+        left: 13.4rem;
+    }
+    
+    /* ------CONTACT-US------ */
+    #contact-us h3 {
+        font-size: 1.85rem;
+    }
+
+
+    /*-------SECT Contact US 768px ----- */
+
+    #contact-us {
+        text-align: center;
+    }
+
+    #contact-form {
+        max-width: 720px;
+    }
+
+    #contact-us button {
+        max-width: 512px;
+        margin: 0 auto;
+    }
+
+    /* ----SECT  Contact info 768px----*/
+
+    #triple-div-info {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #blog-post-container1 {
+        margin-bottom: 0;
+    }
+
+
+
+
+
+}
+
+@media screen and (min-width: 992px) {
+    #sect-cuoco p .to-new-line {
+        display: inline-block;
+    }
+
+    #sect-cuoco p {
+        width: 880px;
+    }
+
+    /* header nav area */
+    #nav-area .menu {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        clear: none;
+        height: 100%;
+        max-height: 100%;
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    #nav-area .menu-icon {
+        display: none;
+    }
+
+    #nav-area li a {
+        padding: 1rem 0;
+        width: auto;
+    }
+
+
+
+    /* BLOG SECTION */
+    .blog-piatto {
+        width: 45%;
+    }
+
+    #blog-plates {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+    }
+
+    #sect-blog #blog-btn {
+        left: 75%;
+    }
+
+    /*-------SECT Contact US 992px ----- */
+
+    #contact-us {
+        width: 940px;
+        text-align: center;
+        margin: 0 auto;
+
+    }
+
+    #contact-form {
+        max-width: 940px;
+    }
+
+    #contact-us button {
+        max-width: 512px;
+        float: right;
+
+    }
+
+    /*---------SECT Contact Info 992px --------*/
+
+    #triple-div-info {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    #info-container {
+        max-width: 940px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-basis: auto;
+        margin: 140px auto 70px auto;
+        
+    }
+
+    .info-cont {
+        width: 33%;
+        padding: 0 1rem;
+    }
+
+    #blog-post-container2 {
+        margin-bottom: 0;
+    }
+
+}
+
+
+@media screen and (min-width: 1200px) {
+    .txt-big{
+        font-size: 4rem;
+    }
+    /* ------- H & Ps ------- */
+    #sect-cuoco h2, #container-menu h2, #subscribe-heading h2{
+        font-size: 3rem;
+    }
+
+    #sect-cuoco p, #subscribe-heading p{
+        font-size: 1.2rem;
+    }
+    #contact-form h4{
+        font-size: 1.5rem;
+    }
+
+/* ----------------------- */
+    /* ------SECT-MENU------ */
+    #container-menu {
+        width: 100%;
+    }
+
+    #container-menu * {
+        max-width: 1140px;
+    }
+
+    #container-menu .menu-itm{
+        width: 100%;
+    }
+
+    #container-menu .menu-itm p{
+        font-size: 1.1rem;
+    }
+    #container-menu .menu-itm h3{
+        font-size: 1.5rem;
+    }
+
+    #container-menu .title-menu p {
+        max-width: 874px;
+    }
+
+
+    #contact-us {
+        width: 1170px;
+        text-align: center;
+        margin: 0 auto;
+
+    }
+
+    #contact-form {
+        max-width: 1170px;
+    }
+
+
+   
+
+    #info-container {
+        width: 1170px;
+        max-width: 1170px;
+        margin: 0 auto;
+        padding: 140px 0 70px 0;
+        
+    }
+
+
+   
+
+    .info-cont {
+        width: 33%;
+        padding: 0 1rem;
+    }
+
+
+
+
+}

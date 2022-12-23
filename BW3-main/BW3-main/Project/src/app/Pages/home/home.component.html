@@ -1,0 +1,23 @@
+
+<router-outlet></router-outlet>
+
+<div class="container">
+  <button class="btn sort-btn d-flex align-items-center"
+    (click)="sortPostsByUpvotes()">
+    <i class="gg-sort-az d-inline-block"></i>
+    <span *ngIf="!sortByUpvotes" class="ms-2 fw-semibold">upvotes</span>
+    <span *ngIf="sortByUpvotes" class="ms-2 fw-semibold">date</span>
+  </button>
+</div>
+
+<app-post class="container-sm-fluid d-flex flex-column align-items-center" [posts]="posts"></app-post>
+
+
+<button type="button" class="btn new-post-btn" (click)="toggleNewPost()" >
+  <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+  </svg>
+</button>
+
+
+

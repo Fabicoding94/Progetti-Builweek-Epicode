@@ -1,0 +1,85 @@
+<!-- profile header -->
+<div class="container my-3" >
+  <div class="row  align-items-center profile-header" *ngIf="editing == false">
+    <div class="col-3">
+      <h3 class="text-center">{{user.username}}</h3>
+      <img [src]="user.avatar" alt="">
+    </div>
+    <div class="col-8">
+      <div class="my-auto ms-5">
+
+        <p class="fw-semibold">Name: <span class="fw-normal">{{user.name}}</span></p>
+        <p class="fw-semibold">Lastname: <span class="fw-normal">{{user.lastname}}</span></p>
+        <p class="fw-semibold">Email: <span class="fw-normal">{{user.email}}</span></p>
+
+      </div>
+    </div>
+    <div class="col-1">
+      <button class="btn btn-warning fw-bold" (click)="editing = true" *ngIf="canUserEdit">🖊</button>
+    </div>
+  </div>
+
+  <!-- form for edit profile -->
+  <div class="row  align-items-center profile-header"  *ngIf="editing">
+    <div class="col-3">
+      <h3 class="text-center">{{user.username}}</h3>
+      <img [src]="user.avatar" alt="">
+    </div>
+    <div class="col-9">
+      <div class="my-auto form-floating">
+
+        <form [formGroup]="editProfile">
+
+          <div class="form-floating mb-2">
+            <input formControlName="name"
+            type="text" class="form-control"
+            id="floatingInput1" placeholder="Name">
+            <label for="floatingInput1">Name</label>
+          </div>
+
+          <div class="form-floating mb-2">
+            <input formControlName="lastname"
+            type="text" class="form-control"
+            id="floatingInput2" placeholder="lastname">
+            <label for="floatingInput2">Lastname</label>
+          </div>
+
+          <div class="form-floating mb-2">
+            <input formControlName="username"
+            type="text" class="form-control"
+            id="floatingInput3" placeholder="username">
+            <label for="floatingInput3">Username</label>
+          </div>
+
+          <div class="form-floating mb-2">
+            <input formControlName="email"
+            type="email" class="form-control"
+            id="floatingInput4" placeholder="email">
+            <label for="floatingInput4">Email</label>
+          </div>
+
+          <button class="btn btn-primary" (click)="openVerticallyCentered(content)">Confirm edit</button>
+          <button class="btn btn-warning ms-2" (click)="editing = false">Cancel edit</button>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- modal for confirm edit profile -->
+  <ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title">Just a second!</h4>
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+      <p>We need you to log back in after you're done editing! Hope it's ok for you!</p>
+      <button type="button" class="btn btn-success" (click)="modal.close(edit())">Yes go on</button>
+    </div>
+  </ng-template>
+
+
+  <app-post [posts]="posts"></app-post>
+</div>
+

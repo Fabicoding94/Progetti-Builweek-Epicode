@@ -1,0 +1,82 @@
+{
+  "users": [
+    {
+      "username": "DDS",
+      "firstName": "Davide",
+      "lastName": "Dal Santo",
+      "gender": "Male",
+      "email": "davide.dds.dalsanto@gmail.com",
+      "tel": "3408884945",
+      "password": "test",
+      "id": 1
+    },
+    {
+      "username": "Clearu",
+      "firstName": "Claudio",
+      "lastName": "Urru",
+      "gender": "Male",
+      "email": "claudio@gmail.com",
+      "tel": "541 456 3678",
+      "password": "sgabello",
+      "id": 2
+    },
+    {
+      "username": "Sawak0",
+      "firstName": "Alessia",
+      "lastName": "Campanile",
+      "gender": "Female",
+      "email": "alessia@gmail.com",
+      "tel": "123 546 6789",
+      "password": "prova",
+      "id": 3
+    },
+    {
+      "username": "FabiCoding",
+      "firstName": "Fabiola",
+      "lastName": "Barone",
+      "gender": "Female",
+      "email": "fabiola@gmail.com",
+      "tel": "389 765 9087",
+      "password": "test",
+      "id": 4
+    }
+  ],
+  "shops": [
+    {
+      "shopName": "Davide's Shop",
+      "address": "Via Roma 1 Vigonza (PD)",
+      "mail": "davide.dds.dalsanto@gmail.com",
+      "tel": "3408884945",
+      "products": "Fugasse",
+      "shopOwner": "Davide Dal Santo (DDS #1)",
+      "id": 1
+    },
+    {
+      "shopName": "Clearu's PCs",
+      "address": "Via Appia 1 Roma (RM)",
+      "mail": "claudio@gmail.com",
+      "tel": "124451234532",
+      "products": "PC repairs shop",
+      "shopOwner": "Claudio Urru (Clearu #2)",
+      "id": 2
+    },
+    {
+      "shopName": "Alessia's shop",
+      "address": "Via paluello 5, Milano (MI)",
+      "mail": "alessia@gmail.com",
+      "tel": "15346125673",
+      "products": "Manga shop",
+      "shopOwner": "Alessia Campanile (Sawak0 #3)",
+      "id": 3
+    },
+    {
+      "shopName": "Fabiola's shop",
+      "address": "Piazza delle Erbe 6 (PD)",
+      "mail": "fabiola@gmail.com",
+      "tel": "43127681891",
+      "products": "Gioielli",
+      "shopOwner": "Fabiola Barone (FabiCoding #4)",
+      "id": 4
+    }
+  ]
+}

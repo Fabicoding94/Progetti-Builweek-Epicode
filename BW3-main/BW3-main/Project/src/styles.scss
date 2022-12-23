@@ -1,0 +1,61 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+*{
+  font-family: 'Montserrat', sans-serif;
+}
+
+body{
+  background-image: url(./assets/sfondi/sfondo9.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+form .ng-invalid.ng-touched{
+  border:1px solid red;
+}
+form .ng-valid{
+  border:1px solid green;
+}
+
+.btn-primary{
+  background-color: rgba(84,111,180,255) !important;
+}
+
+.auth-container {
+  padding: 1rem;
+  min-width: 180px;
+  max-width: 400px;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.623);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 8px 15px 20px 2px rgb(0 0 0 / 20%)
+}
+
+.profile-header{
+  padding:1rem;
+  background-color: rgba(255, 255, 255, 0.623);
+  box-shadow: 8px 15px 20px 2px rgb(0 0 0 / 20%);
+  border-radius: 10px;
+}
+
+
+
+.card {
+  width: 80%;
+  max-width: 900px;
+}
+
+@media screen and (max-width: 720px) {
+  .card {
+      width: 95%;
+  }
+}
+

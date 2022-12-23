@@ -1,0 +1,64 @@
+<div class="container auth-container">
+
+  <main class="form-signin m-auto">
+    <form [formGroup]="form" (submit)="submit()">
+      <h1 class="h3 mb-3 fw-semibold">Register here:</h1>
+
+      <div class="form-floating mb-2">
+        <input formControlName="name"
+        type="text" class="form-control"
+        id="floatingInput1" placeholder="Your name">
+        <label for="floatingInput1">Your name</label>
+      </div>
+
+      <div class="form-floating mb-2">
+        <input formControlName="lastname"
+        type="text" class="form-control"
+        id="floatingInput2" placeholder="Your lastname">
+        <label for="floatingInput2">Your lastname</label>
+      </div>
+
+      <div class="form-floating mb-2">
+        <input formControlName="username"
+        type="text" class="form-control"
+        id="floatingInput3" placeholder="Your username">
+        <label for="floatingInput3">Your username</label>
+      </div>
+      <label *ngIf="checkValidity('username')" class="text-danger">*username already taken</label>
+
+      <div class="form-floating mb-2">
+        <select class="form-select"
+          id="floatingInput4"
+          formControlName="avatar"
+        >
+          <option value="null">Choose your gender:</option>
+          <option value="../../../../assets/gender-photo/male.svg">Male</option>
+          <option value="../../../../assets/gender-photo/female.svg">Female</option>
+          <option value="../../../../assets/gender-photo/other.svg">Other</option>
+        </select>
+        <label for="floatingInput4">Your gender</label>
+      </div>
+
+      <div class="form-floating mb-2">
+        <input formControlName="email"
+        type="email" class="form-control"
+        id="floatingInput5" placeholder="name@example.com">
+        <label for="floatingInput5">Email address</label>
+      </div>
+      <label *ngIf="checkValidity('email')" class="text-danger">*email already taken</label>
+
+      <div class="form-floating mb-2">
+        <input formControlName="password"
+        type="password" class="form-control"
+        id="floatingPassword1" placeholder="Password">
+        <label for="floatingPassword1">Password</label>
+      </div>
+
+      <label *ngIf="isFormValid == false" class="text-danger">*Form is invalid</label>
+      <button [disabled]="form.invalid" class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
+      <a [routerLink]="['/']" class="w-30 btn btn-lg btn-primary my-2">Back to Login</a>
+
+    </form>
+  </main>
+
+</div>

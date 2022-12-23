@@ -1,0 +1,457 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- links to css files -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <!-- / -->
+    <link rel="stylesheet" href="./css/stile.css">
+
+    <!-- link to fontawesome -->
+    <script src="https://kit.fontawesome.com/fe849dba6f.js" crossorigin="anonymous"></script>
+
+    <title>Build Week 1</title>
+</head>
+
+<body onscroll="plsStick('#nav-area')">
+    <header>
+        <!-- ci pensa davide -->
+        <div id="head-container">
+            <img id="head-img" src="./assets/images/header.jpg" alt="#">
+            <div id="nav-area">
+                <img src="./assets/images/logo.png" id="logo" alt="Restaurant's Logo">
+                <input class="menu-btn" id="menu-btn" type="checkbox">
+                <label for="menu-btn" class="menu-icon">
+                    <span class="nav-icon"></span>
+                </label>
+                <ul class="menu">
+                    
+                        <li><a href="#" >HOME</a></li>
+                        <li><a href="#sect-cuoco">ABOUT US</a></li>
+                        <li><a href="#sect-blog">BLOG</a></li>
+                        <li><a href="#sect-menu">MENU</a></li>
+                        <li><a href="#sect-subscribe">NEWS</a></li>
+                        <li><a href="#contact-us">CONTATTI</a></li>
+   
+                </ul>
+
+            </div>
+        </div>
+
+        <div id="head-content">
+            <h3 id="featured-h3">FEATURED <span class="orange-txt">WORKS</span></h3>
+
+            <!-- slider foto pazzesco (da ridimensionare) -->
+            <div class="carusel">
+                <!--body del video-->
+                <div class="slide-container swiper">
+                    <div class="slide-content">
+                        <div class="card-wrapper swiper-wrapper">
+
+                            <div class="card swiper-slide">
+                                <img src="./assets/images/slider/slider-img-1.jpg" alt="#">
+                            </div>
+
+                            <div class="card swiper-slide">
+                                <img src="./assets/images/slider/slider-img-2.jpg" alt="#">
+                            </div>
+
+                            <div class="card swiper-slide">
+                                <img src="./assets/images/slider/slider-img-3.jpg" alt="#">
+                            </div>
+
+                            <div class="card swiper-slide">
+                                <img src="./assets/images/slider/slider-img-4.jpg" alt="#">
+                            </div>
+
+                            <div class="card swiper-slide">
+                                <img src="./assets/images/slider/slider-img-1.jpg" alt="#">
+                            </div>
+
+                            <div class="card swiper-slide">
+                                <img src="./assets/images/slider/slider-img-2.jpg" alt="#">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-button-next swiper-navBtn"></div>
+                    <div class="swiper-button-prev swiper-navBtn"></div>
+                    <div class="swiper-pagination"></div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- foto con tizio cuoco -->
+    <section id="sect-cuoco">
+        <img src="./assets/images/cooker-img.png" class="fade" alt="#">
+        <h2 class="fade">Your <span class="orange-txt txt-big">Restaurant's</span> <span class="to-new-line">Website Has To Look
+                <span class="orange-txt txt-big">Good</span></span></h2>
+
+        <p class="fade">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore <span
+                class="to-new-line">et dolore magna aliqua. Ut enim</span>
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <span
+                class="to-new-line">Duis aute irure dolor in reprehenderit in</span>
+            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+        </p>
+    </section>
+
+
+
+    <!-- section blocchi piatti -->
+    
+    <section id="sect-blog">
+        <div id="blog-title">
+            <h2>Latest <span class="orange-txt txt-big">From</span> the <span class="orange-txt txt-big">Blog</span></h2>
+        </div>
+        <div id="blog-plates">
+
+            <!-- blocco piatto +  testo 1-->
+            <div class="blog-piatto fade">
+                <div class="blog-img">
+                    <img src="./assets/images/blog/blog-img-1.jpg" alt="#">
+                </div>
+                <div class="blog-txt">
+                    <div class="quadrato"></div>
+                    <h3>Homestyle Chicken pot Pie</h3>
+                    <div class="grey-line"></div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea dolore animi praesentium maxime
+                        repudiandae
+                        consequatur.</p>
+                </div>
+            </div>
+
+            <!-- blocco piatto +  testo 2-->
+            <div class="blog-piatto fade">
+                <div class="blog-img">
+                    <img src="./assets/images/blog/blog-img-2.jpg" alt="#">
+                </div>
+                <div class="blog-txt">
+                    <div class="quadrato"></div>
+                    <h3>Homestyle Chicken pot Pie</h3>
+                    <div class="grey-line"></div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea dolore animi praesentium maxime
+                        repudiandae
+                        consequatur.</p>
+                </div>
+            </div>
+
+            <!-- blocco piatto +  testo 3-->
+            <div class="blog-piatto fade" data-reverse>
+                <div class="blog-img">
+                    <img src="./assets/images/blog/blog-img-3.jpg" alt="#">
+                </div>
+                <div class="blog-txt">
+                    <div class="quadrato"></div>
+                    <h3>Homestyle Chicken pot Pie</h3>
+                    <div class="grey-line"></div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea dolore animi praesentium maxime
+                        repudiandae
+                        consequatur.</p>
+                </div>
+            </div>
+
+            <!-- blocco piatto +  testo 4-->
+            <div class="blog-piatto fade" data-reverse>
+                <div class="blog-img">
+                    <img src="./assets/images/blog/blog-img-4.jpg" alt="#">
+                </div>
+                <div class="blog-txt">
+                    <div class="quadrato"></div>
+                    <h3>Homestyle Chicken pot Pie</h3>
+                    <div class="grey-line"></div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea dolore animi praesentium maxime
+                        repudiandae
+                        consequatur.</p>
+                </div>
+            </div>
+
+            <!-- blocco piatto +  testo 5-->
+            <div class="blog-piatto fade">
+                <div class="blog-img">
+                    <img src="./assets/images/blog/blog-img-5.jpg" alt="#">
+                </div>
+                <div class="blog-txt">
+                    <div class="quadrato"></div>
+                    <h3>Homestyle Chicken pot Pie</h3>
+                    <div class="grey-line"></div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea dolore animi praesentium maxime
+                        repudiandae
+                        consequatur.</p>
+                </div>
+            </div>
+
+            <!-- blocco piatto +  testo 6-->
+            <div class="blog-piatto fade">
+                <div class="blog-img">
+                    <img src="./assets/images/blog/blog-img-6.jpg" alt="#">
+                </div>
+                <div class="blog-txt">
+                    <div class="quadrato"></div>
+                    <h3>Homestyle Chicken pot Pie</h3>
+                    <div class="grey-line"></div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea dolore animi praesentium maxime
+                        repudiandae
+                        consequatur.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- mettere dentro div realtive e A absolute -->
+        <div class="button-container fade">
+            <a href="#" id="blog-btn">MORE INFO</a>
+        </div>
+    </section>
+
+
+    <section id="sect-menu">
+        <div id="container-menu">
+
+            <div class="title-menu">
+                <h2>our <span class="orange-txt txt-big">MENU</span> the <span class="orange-txt txt-big">PRICE</span>
+                </h2>
+                <div class="grey-line"></div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco </p>
+            </div>
+
+            <h3>FEATURED <span class="orange-txt"> OF THE WEEK</span></h3>
+
+            <!-- blocco menu item 1 -->
+
+            <div class="menu-itm fade">
+
+                <div class="blocco">
+                    <h3>Pancakes n' Such</h3>
+                    <div class="border-dotted"></div>
+                    <span>$ 25.00</span>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim&&
+                </p>
+            </div>
+
+
+
+            <!-- blocco menu item 2 -->
+            <div class="menu-itm fade">
+
+                <div class="blocco">
+                    <h3>Homestyle Chicken Pot Pie</h3>
+                    <div class="border-dotted"></div>
+                    <span>$ 10.00</span>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim&&
+                </p>
+            </div>
+
+            <!-- blocco menu item 3 -->
+
+            <div class="menu-itm fade">
+
+                <div class="blocco">
+                    <h3>Cereal, Panecillos y Frutas</h3>
+                    <div class="border-dotted"></div>
+                    <span>$ 5.00</span>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim&&
+                </p>
+            </div>
+
+            <!-- blocco menu item 4 -->
+
+            <div class="menu-itm fade">
+
+                <div class="blocco">
+                    <h3>Meat of Skewers</h3>
+                    <div class="border-dotted"></div>
+                    <span>$ 15.00</span>
+                </div>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim&& </p>
+            </div>
+
+
+           
+    
+                <!-- blocco menu item 5 -->
+
+                <div class="menu-itm fade">
+
+                    <div class="blocco">
+                        <h3>Steak with a Garlic and Parsley Risotto</h3>
+                        <div class="border-dotted"></div>
+                        <span>$ 75.00</span>
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim&&                </p>
+                       <!-- blocco menu item 6 -->
+                <div id="menu-ultimo" class="manu-itm fade">
+
+
+                    <div class="blocco">
+                        <h3>Ceaser Salad</h3>
+                        <div class="border-dotted"></div>
+                        <span>$ 7.00</span>
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim&& </p>
+                </div>
+
+
+                </div>
+                <a href="#" id="menu-btn" class="fade">MORE INFO</a>
+
+
+    </section>
+
+
+
+
+    <!-- section per subscribe -->
+    <section id="sect-subscribe">
+        <div id="subscribe-heading">
+            <h2>SUBSCRIBE <span class="orange-txt txt-small">to our</span> NEWSLETTER</h2>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed error eius molestias delectus deserunt.
+            </p>
+        </div>
+        <div id="subscribe-input-general">
+            <div id="news-input-container">
+                <input type="email" name="email" required id="news-input" placeholder="Enter your email to subscribe">
+            </div>
+            <div id="news-btn-container">
+                <button id="news-btn" for="news-input">SUBSCRIBE</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-us" class="fade">
+        <!-- h3 da allineare al centro -->
+        <h3>our <span class="orange-txt txt-big">CONTACT US</span></h3>
+
+        <form id="contact-form" action="#">
+            <h4>SIGN UP FOR <span class="orange-txt">EMAIL ALERTS</span></h4>
+            <input type="name" required placeholder="Write your full name here...">
+            <input type="email" required placeholder="Write your email address here...">
+            <!-- txtarea controllare widht e placeholder -->
+            <textarea name="message" id="form-msg" cols="30" rows="10"
+                placeholder="Write your messege here..."></textarea>
+        </form>
+        <button id="contact-btn" form="contact-form">SEND YOUR MESSAGE</button>
+
+    </section>
+
+    <section id="sect-info">
+
+        <!-- triplo div da gestire con flex box nelle media queries -->
+        <div id="info-container">
+            <div class="info-cont fade" id="blog-post-container0">
+                <h3>CONTACT <span class="orange-txt">INFO</span></h3>
+                <div id="triple-div-info">
+                    <div class="mini-div-info">
+                        <h5><i class="fa-solid fa-phone"></i><span class="orange-txt">Telefono</span></h5>
+                        <p>(000) 123 456 78- (000) 123 4567 89</p>
+                    </div>
+                    <div class="mini-div-info">
+                        <h5><i class="fa-solid fa-location-dot"></i><span class="orange-txt">Address</span></h5>
+                        <p>2046 Blue Spruce Lane Laurel Canada</p>
+                    </div>
+                    <div class="mini-div-info">
+                        <h5><i class="fa-solid fa-envelope"></i><span class="orange-txt">Email</span></h5>
+                        <p>rest@gmail.com - rest@mail.ru</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <!-- secction blog posts link -->
+            <div class="info-cont fade" id="blog-post-container1">
+                <h3>LATEST <span class="orange-txt"> BLOG POST</span></h3>
+                <div class="blog-post-div">
+                    <a href="#" class="blog-link orange-txt">Nov 9-2014</a>
+
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Curabitur ut blandit sapien
+                    </p>
+                </div>
+                <div class="blog-post-div">
+                    <a href="#" class="blog-link orange-txt">Nov 9-2014</a>
+                    <p>
+
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Curabitur ut blandit sapien
+                    </p>
+                </div>
+            </div>
+
+            <!-- section photo stream + follow us -->
+            <!-- possibile attribuzione id su h3 -->
+            <div class="info-cont fade" id="blog-post-container2">
+                <h3>PHOTO <span class="orange-txt">STREAM</span> </h3>
+                <div class="blog-post-div blog-post-d">
+                    <a href="#"><img href="#" src="./assets/images/photo/photo-1.jpg" alt="#"> </a>
+                    <!-- photo per photo stream-->
+                    <a href="#"><img src="./assets/images/photo/photo-2.jpg" alt="#"></a> <!-- photo per photo stream-->
+                    <a href="#"><img src="./assets/images/photo/photo-3.jpg" alt="#"></a> <!-- photo per photo stream-->
+                    <a href="#"><img src="./assets/images/photo/photo-4.jpg" alt="#"></a> <!-- photo per photo stream-->
+
+
+                </div>
+                <h3>Follow <span class="orange-txt">US</span></h3>
+                <div id="fa-img-social">
+
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-solid fa-basketball"></i></a>
+                    <a href="#"><i class="fa-brands fa-behance"></i></a>
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </section>
+    <footer>
+        <div id="final-foot">
+            <p>
+                Copyright &copy; 2014 - All Rights Reserved. Design and Developed By <span class="orange-txt"> TEAM
+                    2</span>
+            </p>
+        </div>
+    </footer>
+
+
+
+
+    <!-- Swiper JS -->
+    <script src="./js/swiper-bundle.min.js"></script>
+    <!-- my script -->
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

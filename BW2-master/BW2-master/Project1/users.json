@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+      "username": "DDS",
+      "firstName": "Davide",
+      "lastName": "Dal Santo",
+      "gender": "male",
+      "email": "davide.dds.dalsanto@gmail.com",
+      "tel": "333 333 3333",
+      "password": "testPassword",
+      "id": 1
+    }
+  ]
+}

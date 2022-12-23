@@ -1,0 +1,234 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Mario",
+      "lastname": "Rossi",
+      "username": "Mr.RedXXX",
+      "avatar": "../../../../assets/gender-photo/male.svg",
+      "email": "mario.rossi@gmail.com",
+      "password": "123456"
+    },
+    {
+      "email": "davide.dds.dalsanto@gmail.com",
+      "password": "$2a$10$l5YxsRo3d2VbAVvTLQqq/O2wQFxhiD0qQOmlRAGscSLmyuRy.fZ4y",
+      "name": "Davide",
+      "lastname": "Dal Santo",
+      "username": "DDS",
+      "slug": "dds",
+      "avatar": "../../../../assets/gender-photo/male.svg",
+      "id": 2
+    },
+    {
+      "email": "fabiola@gmail.com",
+      "password": "$2a$10$.f.yD5tMiuvq9dRfdUX.B.q3iryaO5DqxP2R1C0S.j7Oqxv2fxCT6",
+      "name": "Fabiola",
+      "lastname": "Barone",
+      "username": "Fabi",
+      "slug": "fabi",
+      "avatar": "../../../../assets/gender-photo/female.svg",
+      "id": 3
+    },
+    {
+      "email": "claudio@mail.it",
+      "password": "$2a$10$cSSl5asSW0qs2OatP5Og1.Tud2aFpJd6gBReykxr0vlF0CeeR3Ej2",
+      "name": "Claudio",
+      "lastname": "Urru",
+      "username": "Clearu",
+      "slug": "clearu",
+      "avatar": "../../../../assets/gender-photo/male.svg",
+      "id": 4
+    },
+    {
+      "email": "franci@gmail.com",
+      "password": "$2a$10$kFXKINhT770BfO3Tyb8cc.egieuifIdBWx0Xn5n5ZizjzmCkl8ZeS",
+      "name": "Francesca",
+      "lastname": "Frattini",
+      "username": "Franci",
+      "slug": "franci",
+      "avatar": "../../../../assets/gender-photo/female.svg",
+      "id": 5
+    }
+  ],
+  "posts": [
+    {
+      "isEditing": false,
+      "ownerId": 2,
+      "ownerName": "DDS",
+      "title": "EDIT TEST worka 1",
+      "content": "Test for editing",
+      "date": "2022-09-22T09:32:46.499Z",
+      "upvotes": [],
+      "downvotes": [
+        2,
+        3,
+        4
+      ],
+      "editingValue": [
+        "EDIT TEST worka 1",
+        "Test for editing"
+      ],
+      "edited": true,
+      "showComments": false,
+      "id": 1
+    },
+    {
+      "isEditing": false,
+      "ownerId": 2,
+      "ownerName": "DDS",
+      "title": "Ciao!",
+      "content": "Questo e' il primo post con le proprieta' nuove! Ora puoi editarmi",
+      "date": "2022-09-22T09:57:03.294Z",
+      "upvotes": [
+        3,
+        2,
+        4
+      ],
+      "downvotes": [],
+      "editingValue": [
+        "Ciao!",
+        "Questo e' il primo post con le proprieta' nuove! Ora puoi editarmi"
+      ],
+      "edited": false,
+      "showComments": false,
+      "id": 2
+    },
+    {
+      "isEditing": false,
+      "ownerId": 3,
+      "ownerName": "Fabi",
+      "title": "L’infinito",
+      "content": "Sempre caro mi fu quest’ermo colle,\nE questa siepe, che da tanta parte\nDell’ultimo orizzonte il guardo esclude.\nMa sedendo e mirando, interminati\nSpazi di là da quella, e sovrumani\nSilenzi, e profondissima quiete\nIo nel pensier mi fingo; ove per poco\nIl cor non si spaura. E come il vento\nOdo stormir tra queste piante, io quello\nInfinito silenzio a questa voce\nVo comparando: e mi sovvien l’eterno,\nE le morte stagioni, e la presente\nE viva, e il suon di lei. Così tra questa\nImmensità s’annega il pensier mio:\nE il naufragar m’è dolce in questo mare.",
+      "date": "2022-09-22T15:12:20.644Z",
+      "upvotes": [
+        3,
+        4
+      ],
+      "downvotes": [],
+      "editingValue": [
+        "L’infinito",
+        "Sempre caro mi fu quest’ermo colle,\nE questa siepe, che da tanta parte\nDell’ultimo orizzonte il guardo esclude.\nMa sedendo e mirando, interminati\nSpazi di là da quella, e sovrumani\nSilenzi, e profondissima quiete\nIo nel pensier mi fingo; ove per poco\nIl cor non si spaura. E come il vento\nOdo stormir tra queste piante, io quello\nInfinito silenzio a questa voce\nVo comparando: e mi sovvien l’eterno,\nE le morte stagioni, e la presente\nE viva, e il suon di lei. Così tra questa\nImmensità s’annega il pensier mio:\nE il naufragar m’è dolce in questo mare."
+      ],
+      "edited": false,
+      "showComments": false,
+      "id": 3
+    },
+    {
+      "isEditing": false,
+      "ownerId": 4,
+      "ownerName": "Clearu",
+      "title": "Ciao, sono appena arrivato!",
+      "content": "Ecco il mio primo megapost. Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
+      "date": "2022-09-23T08:05:48.563Z",
+      "upvotes": [
+        4
+      ],
+      "downvotes": [],
+      "editingValue": [
+        "Ciao, sono appena arrivato!",
+        "Ecco il mio primo megapost. Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla"
+      ],
+      "edited": false,
+      "showComments": false,
+      "id": 4
+    },
+    {
+      "isEditing": false,
+      "ownerId": 5,
+      "ownerName": "FranciFranci",
+      "title": "Ciao sono Francesca!",
+      "content": "Ciao amiconi come state?",
+      "date": "2022-09-23T08:29:00.557Z",
+      "upvotes": [
+        5
+      ],
+      "downvotes": [],
+      "editingValue": [
+        "Ciao sono Francesca!",
+        "Ciao amiconi come state?"
+      ],
+      "edited": false,
+      "showComments": true,
+      "id": 5
+    }
+  ],
+  "comments": [
+    {
+      "postId": 2,
+      "ownerId": 3,
+      "title": "Fabi",
+      "content": "Adesso ci sono gli upvote anche sui commenti!!!",
+      "date": "2022-09-22T12:57:20.940Z",
+      "upvotes": [
+        3
+      ],
+      "downvotes": [],
+      "edited": false,
+      "isEditing": false,
+      "id": 1
+    },
+    {
+      "postId": 3,
+      "ownerId": 2,
+      "title": "DDS",
+      "content": "Wow bellissima poesia!",
+      "date": "2022-09-22T15:13:04.257Z",
+      "upvotes": [
+        2,
+        4
+      ],
+      "downvotes": [],
+      "edited": false,
+      "isEditing": false,
+      "id": 2
+    },
+    {
+      "postId": 2,
+      "ownerId": 2,
+      "title": "DDS",
+      "content": "test 1",
+      "date": "2022-09-22T15:27:40.024Z",
+      "upvotes": [],
+      "downvotes": [],
+      "edited": true,
+      "isEditing": false,
+      "id": 3
+    },
+    {
+      "postId": 3,
+      "ownerId": 4,
+      "title": "Clearu",
+      "content": "Fabiola questa poesia e' bellissima!",
+      "date": "2022-09-23T08:06:21.697Z",
+      "upvotes": [],
+      "downvotes": [],
+      "edited": true,
+      "isEditing": false,
+      "id": 4
+    },
+    {
+      "postId": 5,
+      "ownerId": 5,
+      "title": "FranciFranci",
+      "content": "Wow ci sono anche i commenti",
+      "date": "2022-09-23T08:29:14.651Z",
+      "upvotes": [],
+      "downvotes": [],
+      "edited": true,
+      "isEditing": false,
+      "id": 5
+    },
+    {
+      "postId": 5,
+      "ownerId": 4,
+      "title": "Clearu",
+      "content": "test",
+      "date": "2022-09-23T08:47:12.824Z",
+      "upvotes": [],
+      "downvotes": [],
+      "edited": false,
+      "isEditing": false,
+      "id": 6
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top mb-2" aria-label="Fourth navbar example">
+  <div class="container-fluid">
+    <a [routerLink]="['/home']" class="navbar-brand">Hi
+      <span
+        *ngIf="checkIfUserLogged()"
+        class="ms-1 text-warning nav-link d-inline">{{userName}}
+      </span>
+    </a>
+    <button class="navbar-toggler collapsed"
+    type="button"
+    (click)="isMenuCollapsed = !isMenuCollapsed">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse collapse" id="navbarsExample04" [ngbCollapse]="isMenuCollapsed">
+      <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/profile', userNameParam]">My Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/home']">Home</a>
+        </li>
+
+        <li class="nav-item dropdown bg-dark" ngbDropdown>
+          <a class="nav-link dropdown-toggle show pointer" data-bs-toggle="dropdown" aria-expanded="true" ngbDropdownToggle>Settings</a>
+          <ul class="dropdown-menu mb-3" data-bs-popper="static" ngbDropdownMenu>
+            <li class="nav-item">
+              <a (click)="openVerticallyCentered(content)"
+              ngbDropdownItem class="dropdown-item pointer"
+              [disabled]="checkIfUserLogged() == false"
+              >Logout</a>
+            </li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Modal for the logout confirm -->
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Are you sure?</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <p>We will miss you!</p>
+    <button type="button" class="btn btn-danger" (click)="modal.close(logOut())">Yes, log me out</button>
+  </div>
+</ng-template>

@@ -1,0 +1,35 @@
+@import url('https://css.gg/arrow-up-o.css');
+@import url('https://css.gg/arrow-down-o.css');
+
+.card-comment {
+    width: 95%;
+    box-shadow: 8px 15px 20px 2px rgb(0 0 0 / 20%);
+    // height: 7rem;
+}
+
+.btns {
+    // position: absolute;
+    bottom: 0px;
+    width: 100%;
+
+    .button {
+        cursor: pointer;
+    }
+}
+
+.comment-form {
+    width: 100%;
+}
+
+.comment-input {
+    width: 89.5%;
+}
+
+.form-edit-comment {
+    position: relative;
+}
+
+.edit-btns {
+    position: absolute;
+    left: 9px;
+}

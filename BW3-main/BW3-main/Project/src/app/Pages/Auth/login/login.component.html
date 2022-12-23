@@ -1,0 +1,29 @@
+<div class="container auth-container">
+
+  <main class="form-signin m-auto">
+    <form [formGroup]="form" (submit)="login()">
+      <h1 class="h3 mb-3 fw-semibold">Login here:</h1>
+
+      <div class="form-floating my-2">
+        <input formControlName="email"
+        type="email" class="form-control"
+        id="floatingInput1" placeholder="name@example.com">
+        <label for="floatingInput1">Email address</label>
+      </div>
+      <div class="form-floating my-2">
+        <input formControlName="password"
+        type="password" class="form-control"
+        id="floatingPassword1" placeholder="Password">
+        <label for="floatingPassword1">Password</label>
+      </div>
+
+      <label *ngIf="formIsValid == false" class="text-danger">*Form is invalid</label>
+      <button [disabled]="form.invalid" class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
+
+      <h5 class="mt-3 ms-2 fw-normal">Don't have an acount?</h5>
+      <a [routerLink]="['/register']" class="w-100 btn btn-lg btn-primary mb-2">Register</a>
+
+    </form>
+  </main>
+
+</div>

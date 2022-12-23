@@ -1,0 +1,27 @@
+<div class="container new-post-container mt-4">
+
+  <main class="form-signin m-auto">
+    <form [formGroup]="postform" (submit)="submit()">
+      <h1 class="h3 mb-3 fw-normal pt-3">Post something:</h1>
+
+      <div class="form-floating mb-2">
+        <input formControlName="postTitle"
+        type="text" class="form-control"
+        id="floatingInput1" placeholder="Post title">
+        <label for="floatingInput1">Post title</label>
+      </div>
+      <div class="form-floating mb-2">
+        <textarea style="height: 150px" formControlName="postContent"
+        type="text" class="form-control"
+        id="floatingInput2" placeholder="What are you thinking about?"></textarea>
+        <label for="floatingInput2">Post content</label>
+      </div>
+
+      <label *ngIf="formIsValid == false" class="text-danger">*You must fill the form</label>
+      <button [disabled]="postform.invalid"
+      class="w-100 mb-2 btn btn-lg btn-primary" type="submit">Post</button>
+
+    </form>
+  </main>
+
+</div>

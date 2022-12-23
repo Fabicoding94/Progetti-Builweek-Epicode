@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>BW 2 - Home</title>
+</head>
+
+<body>
+
+    <div class="container text-center">
+        <h1 class="pt-5">ALL USERS</h1>
+        <a href="./create.html" class="btn btn-primary">Add New User</a>
+        <div>
+            <label for="nome" class="text-primary">Ricerca per Username: </label>
+            <input type="text" class="form-control text-center" id="ricerca" placeholder="USERNAME">
+            <button class="btn btn-primary my-4" id="searchBtn">Cerca</button>
+        </div>
+    </div>
+    <div class="container mt-4">
+        <div class="accordion" id="searched-users">
+
+        </div>
+
+
+        <!-- contenitore accordion Users -->
+        <div class="accordion" id="myUsers">
+
+            <!-- put everithing in a div d-none -->
+            <div class="d-none">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="dummyAccordion">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#utente-userID" aria-controls="collapseOne">
+                            Nome utente
+                        </button>
+                    </h2>
+                    <div id="utente-userID" class="accordion-collapse collapse" aria-labelledby="dummyAccordion"
+                        data-bs-parent="#myUsers">
+                        <div class="accordion-body">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- next acc item -->
+        </div>
+            
+
+
+
+    </div>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/read.js" type="module"></script>
+    <script src="../js/delete.js"></script>
+    <script src="../js/search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
